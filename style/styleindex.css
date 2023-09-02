@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #6D71EF;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  header img {
+    display: flex;
+    margin: 30px auto;
+    width: 231px;
+    height: 76px;
+  }
+
+  header h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: lighter;
+    font-size: 16dp;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+  }
+
+.boxPesquisa {
+  height: 40px;
+}
+
+
+.box {
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  color: #0021F5;
+  border-radius: 8px;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: start;
+
+}
+
+.box input {
+  margin-top: 12px;
+  margin-left: 16px;
+  width: 100%;
+  border: none;
+  caret-color: #0021F5;
+  color: #0021F5;
+}
+
+.box input::placeholder{
+  color: #0021F5;
+  
+}
+
+.box input:focus-visible {
+  outline: none;
+}
+
+.box i {
+  gap: 16px;
+  margin-top: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  color: #0021F5;
+}
+
+table, td, th {
+  border: 0.1px solid #ffffff;
+  border-collapse: collapse;
+  padding: 5px 2px;
+}
+
+table {
+
+  margin: 40px auto;
+  width: 70%;
+  height: 100%;
+  background-color: #F9DD16;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+
+}
+
+table thead {
+  margin-bottom: 8px;
+}
+
+th {
+  color: #0021F5;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+table td {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: lighter;
+  text-align: center;
+  cursor: pointer;
+}
+
+.conteudoTabela tr:hover {
+  opacity: 0.8;
+  background-color: #fde910;
+  
+}
+
+footer {
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  align-items: end;
+  text-align: end;
+}
+
+footer i {
+  margin-right: 80px;
+  margin-bottom: 8px;
+}
+
+footer p {
+  margin-right: 40px;
+}
+
+.relatorio i{
+  cursor: pointer;
+}
+
+/* JANELA MODAL - FORMULARIO */
+
+.janelaModal {
+  margin: 8px auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+}
+
+.modal {
+  width: 50%;
+  height: 100%;
+  min-width: 450px;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.tituloAdicionar {
+  color: #0021F5;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal #fechar {
+position: absolute;
+margin-top: 8px;
+margin-right: 8px;
+top: 0;
+right: 0;
+color: #ffffff;
+background-color: red;
+border-radius: 50%;
+cursor: pointer;
+height: 24px;
+width: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.modal #fechar:hover{
+  opacity: 0.8;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+form p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form input {
+  width: 60%;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid #0021F5;
+  color: #0021F5;
+  padding: 4px;
+}
+
+form i {
+  margin-right: 8px;
+  color: #0021F5;
+}
+
+.formularioAdicionar input:focus-visible {
+  outline: none;
+}
+
+form label {
+  color: #0021F5;
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+form select {
+  border-radius: 8px;
+  border: 1px solid #0021F5;
+  color: #0021F5;
+  height: 20px;
+}
+
+form button {
+  display: flex;
+  background-color: #0021F5;
+  color: #FFFFFF;
+  border-style: none;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto;
+  width: 200px;
+  height: 32px;
+  cursor: pointer;
+}
+
+form button:hover{
+  opacity: 0.9;
+}
+
+.janelaModal.abrir {
+  display: flex;
+}
+
+@keyframes abrirModal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, -5px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+footer i {
+  color: #F9DD16;
+}
+
+.abrir .modal {
+  animation: abrirModal 0.5s;
+}

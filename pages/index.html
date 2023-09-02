@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30dcee0bc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/styleindex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Suspeita de Fraude</title>
+</head>
+<body>
+    <header>
+        <img src="../assets/logo-bb.png" alt="Logotipo da BB Seguros com as cores do Banco do Brasil"  />
+        <h1>Sistema de Suspeita de Fraude</h1>
+    </header>
+
+    <div class="boxPesquisa">
+       <div class="box">
+                <input type="text" placeholder="Digite o CPF do segurado sem pontuação..." name="pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user-plus" class="botaoAdicionar" onclick="abrirModalAdicionarCliente()"></i>
+       </div>
+       
+    </div>
+    <div class="janelaModal" id="janelaModal">
+        <div class="modal">
+            <i class="fa-solid fa-xmark" id="fechar" onclick="fecharModalAdicionarCliente()"></i>
+            <p class="tituloAdicionar">Cadastrar Cliente</p>
+            <form class="formularioAdicionar">
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome completo do segurado..."/>
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-address-book"></i>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF do segurado..."/>
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="telefone" id="telefone" placeholder="Digite o Telefone do segurado..."/>
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <label>A suspeita de fraude foi confirmada?</label>
+                    <select name="asf" id="asf">
+                        <option value="Sim">Sim</option>
+                        <option value="Nao">Não</option>
+
+                      </select>
+                  </p>
+
+                  <button type="submit">Registrar</button>
+
+            </form>
+        </div>
+   </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Suspeita confirmada?</th>
+                <th>Telefone</th>
+
+            </tr>
+        </thead>
+        <tbody class="conteudoTabela">
+            <tr>
+                <td>1</td>
+                <td>Julio</td>
+                <td>33333333333</td>
+                <td>Sim</td>
+                <td>16991749987</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cesar</td>
+                <td>11111111111</td>
+                <td>Não</td>
+                <td>16991749987</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Rodrigues</td>
+                <td>22222222222</td>
+                <td>Sim</td>
+                <td>16991749987</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <div class="relatorio">
+            <i class="fa-solid fa-download"></i>
+            <p>Gerar Relatório</p>
+        </div>
+    </footer>
+
+
+</body>
+<script src="./scripts/scriptmodal.js"></script>
+</html>
