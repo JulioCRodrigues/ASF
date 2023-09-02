@@ -110,6 +110,7 @@ table td {
 .conteudoTabela tr:hover {
   opacity: 0.8;
   background-color: #fde910;
+  translate: 0.2s;
   
 }
 
@@ -250,6 +251,11 @@ form button {
 
 form button:hover{
   opacity: 0.9;
+}
+
+form input::placeholder {
+  color: #0021F5;
+  opacity: 0.8;
 }
 
 .janelaModal.abrir {
