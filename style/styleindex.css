@@ -152,10 +152,10 @@ footer p {
 }
 
 .modal {
-  width: 50%;
+  width: 40%;
   height: 100%;
-  min-width: 450px;
-  min-height: 300px;
+  min-width: 350px;
+  min-height: 350px;
   background-color: #fff;
   border-radius: 8px;
   position: absolute;

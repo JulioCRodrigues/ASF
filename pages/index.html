@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/30dcee0bc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
     <link rel="stylesheet" href="../style/styleindex.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+
     <title>Suspeita de Fraude</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
 
     <div class="boxPesquisa">
        <div class="box">
-                <input type="text" placeholder="Digite o CPF do segurado sem pontuação..." name="pesquisar">
+                <input type="text" placeholder="Digite o CPF do segurado sem pontuação..." name="pesquisar" id="buscar">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-user-plus" class="botaoAdicionar" onclick="abrirModalAdicionarCliente()"></i>
        </div>
@@ -41,6 +44,10 @@
                     <i class="fa-solid fa-phone"></i>
                     <input type="text" name="telefone" id="telefone" placeholder="Digite o Telefone do segurado..."required />
                   </p>
+                  <p>
+                    <i class="fa-solid fa-list-ol"></i>
+                    <input type="text" name="protocolo" id="protocolo" placeholder="Insira o protocolo do atendimento..."required />
+                  </p>
 
                   <p>
                     <i class="fa-solid fa-circle-exclamation"></i>
@@ -57,7 +64,7 @@
             </form>
         </div>
    </div>
-    <table id="tabelaCliente" class="tabela">
+    <table id="tabelaCliente">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -65,6 +72,7 @@
                 <th>Suspeita confirmada?</th>
                 <th>Telefone</th>
                 <th>Data</th>
+                <th>Protocolo</th>
 
             </tr>
         </thead>
@@ -84,4 +92,8 @@
 <script src="./scripts/scriptmodal.js"></script>
 <script src="./scripts/table2excel.js"></script>
 <script src="./scripts/crud.js"></script>
+<script src="./scripts/filtro.js"></script>
+
+
+
 </html>

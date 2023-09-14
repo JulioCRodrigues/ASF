@@ -35,7 +35,8 @@ const salvarCliente = () => {
             nome: document.getElementById('nome').value,
             cpf: document.getElementById('cpf').value,
             suspeita: document.getElementById('asf').value,
-            telefone: document.getElementById('telefone').value
+            telefone: document.getElementById('telefone').value,
+            protocolo: document.getElementById('protocolo').value
 
         }
         criarCliente(cliente)
@@ -47,17 +48,23 @@ var data = new Date();
 var dataFormatada = ("0" + data.getDate()).substr(-2) + "/" 
     + ("0" + (data.getMonth() + 1)).substr(-2) + "/" + data.getFullYear();
 
+    // Função que pesquisa os clientes na barra de busca 
+
 const criarLinha = (cliente) => {
+    
     const novaLinha = document.createElement('tr')
     novaLinha.innerHTML = `
     <td>${cliente.nome}</td>
-        <td>${cliente.cpf}</td>
+        <td class="cpfBusca">${cliente.cpf}</td>
     <td>${cliente.suspeita}</td>
     <td>${cliente.telefone}</td>
     <td>${dataFormatada}</td>
+    <td>${cliente.protocolo}</td>
+    
     `
 
     document.querySelector('#tabelaCliente>tbody').appendChild(novaLinha)
+
 }
 
 const atualizarTabela = () => {
@@ -67,6 +74,8 @@ const atualizarTabela = () => {
 }
 
 atualizarTabela()
+
+
 
 
 // Gerando relatorio da Tabela 
